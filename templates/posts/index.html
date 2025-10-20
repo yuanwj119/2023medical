@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无限滚动演示</title>
+    <style>
+        /* 基本样式设置 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 50px; /* 底部内边距50px */
+        }
+        
+        /* 帖子样式 */
+        .post {
+            background-color: #77dd11; /* 背景色#77dd11 */
+            padding: 20px; /* 内边距20px */
+            margin: 10px; /* 外边距10px */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 帖子容器，用于存放动态加载的帖子 -->
+    <div id="posts"></div>
+    
+    <!-- 引入JavaScript文件 -->
+    <script src="{% static 'posts/script.js' %}"></script>
+</body>
+</html>
