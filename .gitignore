@@ -1,0 +1,48 @@
+# Django project
+
+# SQLite databases
+*.sqlite3
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Virtual environment
+venv/
+env/
+env3/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Django
+*.log
+local_settings.py
+
+# Static files (optional, depending on deployment strategy)
+# staticfiles/
+
+# Media files
+media/
+
+# Cache
+.cache/
+.django_cache/

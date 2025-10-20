@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django 单页应用</title>
+    <style>
+        .page-content {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>单页应用演示</h1>
+    <div>
+        <button onclick="showPage(1)">Page 1</button>
+        <button onclick="showPage(2)">Page 2</button>
+        <button onclick="showPage(3)">Page 3</button>
+    </div>
+    
+    <div id="page1" class="page-content">
+        <h2>Page 1 内容</h2>
+        <p>这里是 Page 1 的内容区域。</p>
+    </div>
+    
+    <div id="page2" class="page-content">
+        <h2>Page 2 内容</h2>
+        <p>这里是 Page 2 的内容区域。</p>
+    </div>
+    
+    <div id="page3" class="page-content">
+        <h2>Page 3 内容</h2>
+        <p>这里是 Page 3 的内容区域。</p>
+    </div>
+    
+    <script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
