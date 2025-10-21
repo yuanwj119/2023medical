@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <!-- 引入 Bootstrap 的 CSS 文件 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义的 CSS 文件 -->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标库 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的博客
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">博客文章</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">作品集</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系我</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页英雄区域 -->
+    <header id="home" class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 pt-32">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <img src="https://picsum.photos/seed/profile/200/200" alt="个人头像" class="rounded-full img-thumbnail mb-4 border-4 border-white shadow-lg">
+                    <h1 class="display-4 mb-4">你好，我是<span class="text-yellow-300">张小明</span></h1>
+                    <p class="lead mb-6">一名热爱技术和写作的全栈开发者，欢迎来到我的个人博客！</p>
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="#about" class="btn btn-primary btn-lg">了解更多</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">联系我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-12">
+                    <h2 class="display-4">关于我</h2>
+                    <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="text-2xl mb-4">我的故事</h3>
+                    <p class="mb-4">你好，我是张小明，一名拥有5年经验的全栈开发者。我热爱技术、编程和分享知识，这也是我创建这个博客的初衷。</p>
+                    <p class="mb-4">我的技术栈包括Python、Django、JavaScript、React等，我热衷于构建美观、高效且用户友好的Web应用。</p>
+                    <p>在这个博客中，我会分享我的技术心得、编程技巧、项目经验以及一些生活感悟。希望能与大家共同学习、共同进步！</p>
+                    <div class="mt-6">
+                        <h4 class="text-xl mb-3">技术栈</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Django</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-primary">HTML5</span>
+                            <span class="badge bg-primary">CSS3</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                            <span class="badge bg-primary">Git</span>
+                            <span class="badge bg-primary">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl mb-4">我的技能</h3>
+                        <!-- 技能进度条 -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-between mb-1">
+                                <span>Python/Django</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-between mb-1">
+                                <span>JavaScript/React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-between mb-1">
+                                <span>HTML5/CSS3</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-between mb-1">
+                                <span>数据库设计</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-between mb-1">
+                                <span>DevOps</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客文章区域 -->
+    <section id="blog" class="py-16">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-12">
+                    <h2 class="display-4">博客文章</h2>
+                    <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600">最新的技术分享和心得</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 博客文章卡片 1 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://picsum.photos/seed/blog1/600/400" class="card-img-top" alt="文章缩略图">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Django</span>
+                            <h3 class="card-title h5 mb-2">Django 5.0新特性详解</h3>
+                            <p class="card-text text-gray-600 mb-4">探索Django 5.0带来的最新功能和改进，包括性能优化、安全增强和开发者体验提升。</p>
+                            <div class="d-flex justify-between items-center">
+                                <span class="text-sm text-gray-500">2023-11-15</span>
+                                <a href="#" class="btn btn-primary btn-sm">阅读更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 博客文章卡片 2 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://picsum.photos/seed/blog2/600/400" class="card-img-top" alt="文章缩略图">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Python</span>
+                            <h3 class="card-title h5 mb-2">Python异步编程指南</h3>
+                            <p class="card-text text-gray-600 mb-4">学习如何使用Python的asyncio库进行异步编程，提高应用程序的性能和响应速度。</p>
+                            <div class="d-flex justify-between items-center">
+                                <span class="text-sm text-gray-500">2023-10-28</span>
+                                <a href="#" class="btn btn-primary btn-sm">阅读更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 博客文章卡片 3 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://picsum.photos/seed/blog3/600/400" class="card-img-top" alt="文章缩略图">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">前端开发</span>
+                            <h3 class="card-title h5 mb-2">现代CSS布局技巧</h3>
+                            <p class="card-text text-gray-600 mb-4">掌握Flexbox和Grid布局技术，打造灵活、响应式的现代网页设计。</p>
+                            <div class="d-flex justify-between items-center">
+                                <span class="text-sm text-gray-500">2023-10-12</span>
+                                <a href="#" class="btn btn-primary btn-sm">阅读更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-8">
+                <div class="col-lg-12 text-center">
+                    <a href="#" class="btn btn-primary btn-lg">查看全部文章</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集区域 -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-12">
+                    <h2 class="display-4">作品集</h2>
+                    <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600">我的一些代表性项目</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 项目卡片 1 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="https://picsum.photos/seed/project1/600/400" class="card-img-top" alt="项目缩略图">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 text-white">
+                                    <p class="mb-0">电子商务平台，包含完整的购物流程和支付功能</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-2">电商平台</h3>
+                            <p class="card-text text-gray-600 mb-4">使用Django和React开发的全功能电商系统</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge bg-secondary">Django</span>
+                                <span class="badge bg-secondary">React</span>
+                                <span class="badge bg-secondary">PostgreSQL</span>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 项目卡片 2 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="https://picsum.photos/seed/project2/600/400" class="card-img-top" alt="项目缩略图">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 text-white">
+                                    <p class="mb-0">内容管理系统，支持富文本编辑和媒体管理</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-2">内容管理系统</h3>
+                            <p class="card-text text-gray-600 mb-4">自定义CMS，专为中小型网站设计</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge bg-secondary">Django</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">MySQL</span>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 项目卡片 3 -->
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <div class="card h-100 shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="https://picsum.photos/seed/project3/600/400" class="card-img-top" alt="项目缩略图">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 text-white">
+                                    <p class="mb-0">数据分析仪表板，实时展示业务关键指标</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-2">数据仪表板</h3>
+                            <p class="card-text text-gray-600 mb-4">交互式数据可视化平台，支持自定义报表</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Django</span>
+                                <span class="badge bg-secondary">Chart.js</span>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我区域 -->
+    <section id="contact" class="py-16">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-12">
+                    <h2 class="display-4">联系我</h2>
+                    <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600">有任何问题或合作意向，欢迎随时联系我</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6 h-100">
+                        <h3 class="text-2xl mb-4">发送消息</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="form-label">您的姓名</label>
+                                <input type="text" class="form-control" id="name" placeholder="请输入您的姓名">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">电子邮箱</label>
+                                <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱地址">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="form-label">主题</label>
+                                <input type="text" class="form-control" id="subject" placeholder="请输入消息主题">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">消息内容</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="请输入您的消息内容"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">发送消息</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6 h-100">
+                        <h3 class="text-2xl mb-4">联系方式</h3>
+                        <div class="mb-6">
+                            <p class="mb-4">如果您有任何问题或建议，欢迎通过以下方式与我联系。我会尽快回复您的消息。</p>
+                            <p>除了通过表单发送消息外，您还可以通过以下方式直接联系我：</p>
+                        </div>
+                        <div class="mb-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fa fa-envelope-o text-blue-500 mr-3" aria-hidden="true"></i>
+                                    <strong>电子邮箱：</strong> contact@example.com
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-phone text-blue-500 mr-3" aria-hidden="true"></i>
+                                    <strong>电话：</strong> 138-0000-0000
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-map-marker text-blue-500 mr-3" aria-hidden="true"></i>
+                                    <strong>地址：</strong> 北京市海淀区中关村科技园
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl mb-3">关注我</h4>
+                            <div class="d-flex gap-4">
+                                <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors duration-300">
+                                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors duration-300">
+                                    <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors duration-300">
+                                    <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors duration-300">
+                                    <i class="fa fa-weibo fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <h3 class="text-xl mb-4">关于我的博客</h3>
+                    <p>这是我的个人博客，我会在这里分享我的技术心得、编程经验和生活感悟。欢迎关注我的博客，与我一起交流学习！</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-6">
+                    <h3 class="text-xl mb-4">快速链接</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">首页</a></li>
+                        <li class="mb-2"><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">关于我</a></li>
+                        <li class="mb-2"><a href="#blog" class="text-gray-300 hover:text-white transition-colors duration-300">博客文章</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">作品集</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-6">
+                    <h3 class="text-xl mb-4">订阅我的博客</h3>
+                    <p>订阅我的博客更新，第一时间获取最新的技术分享和文章推送。</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="请输入您的邮箱地址">
+                            <button type="submit" class="btn btn-primary">订阅</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center pt-6 border-t border-gray-700">
+                    <p>&copy; 2023 我的个人博客. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="btn btn-primary fixed-bottom-right p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- 引入 Bootstrap 的 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义 JavaScript -->
+    <script>
+        // 页面滚动监听，显示/隐藏返回顶部按钮
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // 返回顶部功能
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // 减去导航栏高度
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-dark/95', 'shadow-lg');
+                navbar.classList.remove('bg-dark');
+            } else {
+                navbar.classList.remove('bg-dark/95', 'shadow-lg');
+                navbar.classList.add('bg-dark');
+            }
+        });
+    </script>
+</body>
+</html>

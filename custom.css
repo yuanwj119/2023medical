@@ -1,0 +1,161 @@
+/* 自定义CSS样式 */
+
+/* 返回顶部按钮样式 */
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+/* 导航栏动画 */
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+/* 卡片悬停效果增强 */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 渐变背景增强 */
+.bg-gradient-to-br {
+    background: linear-gradient(135deg, var(--bs-blue-600) 0%, var(--bs-purple-700) 100%);
+}
+
+/* 自定义按钮样式 */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* 自定义标题样式 */
+.display-4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* 进度条样式增强 */
+.progress {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0d6efd 0%, #0a58ca 100%);
+    transition: width 1.5s ease-in-out;
+}
+
+/* 表单元素样式增强 */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* 徽章样式增强 */
+.badge {
+    border-radius: 16px;
+    padding: 0.35em 0.65em;
+    font-weight: 500;
+}
+
+/* 图片悬停效果 */
+img {
+    transition: all 0.3s ease;
+}
+
+/* 阴影效果增强 */
+.shadow-lg {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-collapse {
+        background-color: rgba(33, 37, 41, 0.95);
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 页面加载动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 文本选择样式 */
+::selection {
+    background-color: rgba(13, 110, 253, 0.2);
+    color: #0d6efd;
+}
+
+/* 导航栏链接激活状态 */
+.nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 600;
+}
+
+/* 社交图标悬停效果 */
+.text-blue-500:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+}

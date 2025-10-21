@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+/* 文章卡片样式 */
+.article-card {
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.article-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 作者卡片样式 */
+.author-card {
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.author-info {
+  padding: 1.5rem;
+}
+
+.article-count {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* 文章详情页样式 */
+.article-content {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.article-info {
+  background-color: #e9ecef;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.comment-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.comment {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 页脚样式 */
+footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  color: #6c757d;
+}

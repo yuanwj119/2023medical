@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <!-- 引入Bootstrap的CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 2rem;
+            background-color: #f8f9fa;
+        }
+        .author-card {
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .author-info {
+            padding: 1.5rem;
+        }
+        .article-count {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="mb-5">
+            <h1 class="text-center">{{ page_title }}</h1>
+            <hr>
+        </header>
+        
+        <main>
+            {% if authors %}
+                <div class="row">
+                    {% for author in authors %}
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card author-card">
+                                <div class="author-info">
+                                    <h2 class="card-title">{{ author.username }}</h2>
+                                    {% if author.email %}
+                                        <p class="text-muted">{{ author.email }}</p>
+                                    {% endif %}
+                                    
+                                    <!-- 获取并显示该作者的文章数量 -->
+                                    {% with article_count=author.article_set.count %}
+                                        <p>文章数量: <span class="article-count badge bg-primary">{{ article_count }}</span></p>
+                                    {% endwith %}
+                                    
+                                    <!-- 显示该作者的最新文章 -->
+                                    {% with latest_article=author.article_set.first %}
+                                        {% if latest_article %}
+                                            <p>最新文章: <a href="{% url 'blog_app:blog_detail' latest_article.id %}">{{ latest_article.title }}</a></p>
+                                        {% endif %}
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-info text-center">
+                    <p>暂无作者信息</p>
+                </div>
+            {% endif %}
+        </main>
+        
+        <footer class="mt-5 pt-5 border-top">
+            <div class="text-center">
+                <p>&copy; 2024 个人博客系统</p>
+                <p><a href="{% url 'blog_app:blog_list' %}">返回博客列表</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 引入Bootstrap的JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
